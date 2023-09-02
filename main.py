@@ -1,4 +1,5 @@
 import multiprocessing
+import time
 
 def factorize_number(number):
     factors = []
@@ -18,7 +19,6 @@ if __name__ == "__main__":
     numbers = (128, 255, 99999, 10651060)
     
     # Синхронна версія
-    import time
     start_time = time.time()
     results_sync = factorize(*numbers)
     end_time = time.time()
