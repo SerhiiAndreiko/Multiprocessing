@@ -1,4 +1,4 @@
-import multiprocessing
+
 
 def factorize_single(number):
     factors = []

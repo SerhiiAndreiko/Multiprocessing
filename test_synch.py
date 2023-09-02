@@ -1,4 +1,4 @@
-import multiprocessing
+from multiprocessing import Pool, cpu_count
 
 def factorize_single(number):
     factors = []
@@ -8,7 +8,7 @@ def factorize_single(number):
     return factors
 
 def factorize(*numbers):
-    pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
+    pool = Pool(processes=cpu_count())
     result = pool.map(factorize_single, numbers)
     pool.close()
     pool.join()
